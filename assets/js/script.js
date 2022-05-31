@@ -1,20 +1,17 @@
-// Disclaimer inicial
-alert("Le presentamos las opciones disponibles dentro de Chillin'")
-
 // Defino la variable de tipo de café
 let coffeeType; 
 
 // Listado de cafés disponibles
 const coffees = [
     {
-        id: 1,
+        id: "icedvanillalatte",
         image: "../assets/img/product_3.png",
         name: "Iced Vanilla Latte",
         description: "Bebida a base de espresso y jarabe de vainilla con hielo.",
         price: "$550"
     },
     {
-        id: 2,
+        id: "carameltoffeelatte",
         image: "../assets/img/product_2.png",
         name: "Caramel Toffee Latte",
         description: "Bebida a base de café, salsa de caramelo, toffee y canela.",
@@ -22,14 +19,14 @@ const coffees = [
 
     },
     {
-        id: 3,
+        id: "flatwhite",
         image: "../assets/img/product_1.png",
         name: "Flat White",
         description: "Bebida a base de espresso que contiene leche cremada.",
         price: "$610"
     },
     {
-        id: 4,
+        id: "capuccino",
         image: "../assets/img/product_4.png",
         name: "Capuccino",
         description: "Bebida preparada con café espreso y leche montada con vapor.",
@@ -71,12 +68,14 @@ const events = [
         date: "6 de Octubre 2022 - 21:30hs",
         address: "Cuyo 1590, Martínez, Provincia de Buenos Aires"
     }
-]
+];
+
+
 
 // Función para hacer la selección por prompts y alerts
 function selectOption() {
     
-    let optionSelected = '';
+    /*let optionSelected = '';
     
     if(optionSelected !== 'Ninguna') {
 
@@ -106,44 +105,7 @@ function selectOption() {
                 break;
             }
         }
-    }
-}
-
-
-// Función para listar cafés
-function listCoffee() {
-
-    const tiendaContainer = document.querySelector("#tienda-products");
-    
-    coffees.forEach(
-        (coffee)=>{
-            //Creo elementos
-            const tiendaItem = document.createElement("div");
-            const tiendaItemImage = document.createElement("img");
-            const tiendaItemTitle = document.createElement("h3");
-            const tiendaItemDescription = document.createElement("p");
-            const tiendaItemPrice = document.createElement("span");
-            const tiendaItemButton = document.createElement("a");
-
-            //Defino propiedades y clases
-            tiendaItemImage.src = coffee.image;
-            tiendaItemImage.alt = coffee.name;
-            tiendaItem.classList.add("section__favorites-products--item", "col-md-6", "col-lg-3");
-            tiendaItemTitle.innerHTML = coffee.name;
-            tiendaItemDescription.innerHTML = coffee.description;
-            tiendaItemPrice.innerHTML = coffee.price;
-            tiendaItemButton.innerHTML = "Agregar al carrito";
-            tiendaItemButton.href= "";
-
-            //Muestro los elementos
-            tiendaContainer.appendChild(tiendaItem);
-            tiendaItem.appendChild(tiendaItemImage);
-            tiendaItem.appendChild(tiendaItemTitle);
-            tiendaItem.appendChild(tiendaItemDescription);
-            tiendaItem.appendChild(tiendaItemPrice);
-            tiendaItem.appendChild(tiendaItemButton);
-        }
-    );
+    }*/
 }
 
 // Función para comprar café
@@ -182,46 +144,15 @@ function totalCoffee(quantity){
     modalTienda.style.display = "block";
 }
 
-// Función para listar eventos
-function listEvents() {
-
-    const eventsContainer = document.querySelector("#events-items");
-
-    events.forEach(
-        (event)=>{
-            //Creo elementos
-            const eventoItem = document.createElement("div");
-            const eventoImageContainer = document.createElement("div");
-            const eventoTextContainer = document.createElement("div");
-            const eventoItemImage = document.createElement("img");
-            const eventoItemTitle = document.createElement("h4");
-            const eventoItemDescription = document.createElement("h5");
-            const eventoItemDate = document.createElement("span");
-            const eventoItemAddress = document.createElement("a");
-
-            //Defino propiedades y clases
-            eventoItem.classList.add("section__events-event", "row");
-            eventoItemImage.src = event.image;
-            eventoItemImage.alt = event.name;
-            eventoImageContainer.classList.add("section__events-event--image", "col-lg-6", "fadeInLeft");
-            eventoTextContainer.classList.add("section__events-event--text", "col-lg-6", "fadeInRight");
-            eventoItemTitle.innerHTML = event.name;
-            eventoItemDescription.innerHTML = event.description;
-            eventoItemDate.innerHTML = "<b>Día y horario:</b> " + event.date;
-            eventoItemAddress.innerHTML = "<b>Dirección:</b> " + event.address;
-
-            //Muestro los elementos
-            eventsContainer.appendChild(eventoItem);
-            eventoItem.appendChild(eventoImageContainer);
-            eventoImageContainer.appendChild(eventoItemImage);
-            eventoItem.appendChild(eventoTextContainer);
-            eventoTextContainer.appendChild(eventoItemTitle);
-            eventoTextContainer.appendChild(eventoItemDescription);
-            eventoTextContainer.appendChild(eventoItemDate);
-            eventoTextContainer.appendChild(eventoItemAddress);
-        }
-    );
-}
 
 // Opciones a seleccionar por el usuario
 selectOption();
+
+// Listado de cafés
+listCoffee();
+
+// Listado de eventos
+listEvents();
+
+// Abrir carrito
+openCart();
