@@ -1,11 +1,13 @@
 // Cerrar modal tienda
 function closeModal() {
     const closeModal = document.querySelector("#close_modal");
-    const modalTienda = document.querySelector("#modal_tienda");
-    closeModal.addEventListener("click", (e)=>{  
-        e.preventDefault();
-        modalTienda.style.display = "none";
-    });
+    if(closeModal) {
+        const modalTienda = document.querySelector("#modal_tienda");
+        closeModal.addEventListener("click", (e)=>{  
+            e.preventDefault();
+            modalTienda.style.display = "none";
+        });
+    }
 }
 
 // Función para listar cafés

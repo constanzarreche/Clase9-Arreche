@@ -73,9 +73,9 @@ const events = [
 
 
 // Función para hacer la selección por prompts y alerts
-function selectOption() {
+/*function selectOption() {
     
-    /*let optionSelected = '';
+    let optionSelected = '';
     
     if(optionSelected !== 'Ninguna') {
 
@@ -105,11 +105,11 @@ function selectOption() {
                 break;
             }
         }
-    }*/
-}
+    }
+}*/
 
 // Función para comprar café
-function totalCoffee(quantity){
+/*function totalCoffee(quantity){
 
     const modalTienda = document.querySelector("#modal_tienda");
     const modalTiendaTotal = document.querySelector("#tienda-total");
@@ -143,10 +143,8 @@ function totalCoffee(quantity){
     document.body.appendChild(modalTienda);
     modalTienda.style.display = "block";
 }
+*/
 
-
-// Opciones a seleccionar por el usuario
-selectOption();
 
 // Listado de cafés
 listCoffee();
