@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Chillin' Café, historia, valores, dedicación, esfuerzo, amor por el café">
+    <meta name="description" content="Página donde podrás conocer más sobre nosotros, nuestros valores e historia">
+    <link rel="shortcut icon" href="../favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <title>Chillin´ - Tienda</title>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar__container px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/img/logo.png" alt="Logo Chillin'" class="w-100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tienda -->
+    <section class="tienda--container text-center px-4">
+        <div class="container-fluid">
+            <h1 class="fadeIn text-center">Chillin' tienda</h1>
+            <h2 class="fadeIn text-center">¡Te llevamos el café más rico a la puerta de tu hogar! Conoce nuestra selección:</h2>
+            <section class="tienda" id="tienda_spacing">
+                <article class="row fadeInUp section__favorites-products" id="tienda-products">
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <div id="modal_tienda">
+        <div class="inside_modal">
+            <a href="" id="close_modal">✖</a>
+            <div class="modal_tienda_content">
+                <h2>¡Muchas gracias por su compra!</h2>
+                <h3 id="tienda-total"></h3>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Footer -->  
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <a href="../index.html" class="col-lg-4 footer__logo">
+                    <img src="../assets/img/logo_footer.png" alt="Logo Chillin" title="Chillin">
+                </a>
+                <div class="col-lg-8 d-flex flex-wrap footer__links">
+                    <nav  class="col-12 col-lg-10 footer__links-menu">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="tienda.html">Tienda</a></li>
+                            <li><a href="nosotros.html">Nosotros</a></li>
+                            <li><a href="eventos.html">Eventos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+        
+                    <ul class="col-12 col-lg-2 footer__links-social">
+                        <li><a href="https://instagram.com/chillin.coffee.house/" target="_blank"><img src="../assets/img/instagram.svg" alt="Instagram de Chillin"></a></li>
+                    </ul>
+        
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script Custom -->
+    <script defer src="../assets/js/script.js"></script>
+</body>
+</html>

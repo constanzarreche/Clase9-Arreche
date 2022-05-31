@@ -1,0 +1,26 @@
+// Text alignment
+@mixin text-alignment($align) {
+    @if $align == center {
+        text-align: center;
+    } @else if $align == right {
+        text-align: right;
+    } @else if $align == left {
+        text-align: left;
+    }
+    
+}
+
+// Media queries
+@mixin device-size($size) {
+    @if $size == break-xs {
+        @media (min-width: 768px) { @content; }
+    } @else if $size == break-sm {
+        @media (min-width: 992px) { @content; }
+    } @else if $size == break-md {
+        @media (min-width: 1024px) { @content; }
+    } @else if $size == break-lg {
+        @media (min-width: 1200px) { @content; }
+    } @else if $size == break-xl {
+        @media (min-width: 1600px) { @content; }
+    }
+}

@@ -1,0 +1,54 @@
+/* NAVBAR */
+.navbar__container.navbar-light {
+    padding-top: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: map-get($map:$webColors,$key:'white');
+    height: auto;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+    #navbarSupportedContent {
+        min-height: 100vh;
+
+        @include device-size(break-sm){
+            min-height: initial;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        box-shadow: none;
+    }
+
+    .navbar-brand {
+        .w-100 {
+            max-width: 150px!important;
+
+            @include device-size(break-md){
+                max-width: 100%!important;
+            }
+        }
+    } 
+
+    .navbar-nav {
+        .nav-link {
+            text-transform: uppercase;
+            color: map-get($map:$webColors,$key:'main-color');
+
+            &:hover,
+            &:focus,
+            &:active {
+                opacity: .7;
+                color: map-get($map:$webColors,$key:'main-color');
+            }
+
+            @include device-size(break-md){
+                font-size: 0.9em;
+                padding: 5px 15px;
+            }
+        }
+    }
+}
